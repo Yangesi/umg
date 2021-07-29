@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/elementos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
     <title>HTML5</title>
 </head>
 <body>
-    <header>
-        <nav>
-        <center>
-        <img src="../IMAGES/html5.png" width="100">
-        <h1>DESARROLLO WEB</h1>
-        <h2>Introduccion a HTML 5</h2>
-        </center>
-            <a href="index.html">INICIO</a>
-            <a href="elementos.html">ELEMENTOS</a>
-            <a href="atributos.html">ATRIBUTOS</a>
-        </nav>
-    </header>
-
+<div id="container">
+        <div id="header">
+            <header>
+                <center>
+                    <img src="../IMAGES/html5.png" width="50">
+                    <h1>DESARROLLO WEB</h1>
+                    <h2>Introduccion a HTML 5</h2>
+                </center>
+            </header>
+            <nav>
+                <a id="menu" href="index.html">INICIO</a>
+                <a id="menu" href="elementos.html">ELEMENTOS</a>
+                <a id="menu" href="atributos.html">ATRIBUTOS</a>
+                <a id="menu" href="propiedadescss.html">PROPIEDADES CSS</a>
+            </nav>
+        </div>
+<main id="contenido">
     <section>
     <h3>Elementos HTML</h3>
-    <table border="">
+    <table id="table1">
         <tr>
-            <td><b>No</b></td>
-            <td>Elemento</td>
-            <td>Definicion</td>
+            <td id="titulo_table"><b>No</b></td>
+            <td id="titulo_table"><b>Elemento</b></td>
+            <td id="titulo_table"><b>Definicion</b></td>
         </tr>
         <tr>
             <td>1</td>
@@ -80,7 +86,11 @@
         </tr>
     </table>
     </section>
-
+    </main>
+    <footer id="footer">
+        <h4>PABLO ORTEGA 1590-17-1547</h4>
+    </footer>
+</div>
        
 </body>
 </html>
