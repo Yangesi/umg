@@ -88,3 +88,49 @@ td{
     display: flex;
     justify-content: center;
 }
+
+#container2 {
+	width: 90%;
+	max-width: 1100px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "seccion1 seccion2 seccion3"
+						 "seccion4 seccion5 seccion6"
+						 "seccion7 seccion8 seccion8";
+}
+
+#seccion1 {
+	grid-area: seccion1;
+}
+
+#seccion2{
+	grid-area: seccion2;
+}
+
+#seccion3{
+	grid-area: seccion3;
+}
+
+#seccion4{
+	grid-area: seccion4;
+}
+
+#seccion5{
+	grid-area: seccion5;
+}
+
+#seccion6{
+	grid-area: seccion6;
+}
+
+#seccion7{
+	grid-area: seccion7;
+}
+
+#seccion8{
+	grid-area: seccion8;
+}
+
