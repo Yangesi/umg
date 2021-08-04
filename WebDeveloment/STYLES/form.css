@@ -1,0 +1,145 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background: #e9ecf4;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+#container {
+	width: 90%;
+	max-width: 1100px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "header"
+						 "contenido"
+						 "footer";
+}
+
+#container > div,
+#container #header,
+#container #contenido,
+#container #footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+#container #header {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+}
+
+#container #contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	grid-area: contenido;
+}
+
+#container #footer {
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	#container {
+        grid-template-areas: "header"
+                             "contenido"
+                             "footer";
+	}
+}
+
+/*FORM*/
+
+#contform{
+	display: grid;
+
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "form1"
+						 "form2"
+                         "submit";
+
+}
+
+#menu{
+	text-decoration: none;
+	color: #ffffff;
+	margin: 5px;
+
+}
+
+.row2cols{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 3px;
+}
+
+.row2cols2{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 3px;
+}
+
+#doc_id{
+    margin-left: 10px;
+}
+
+#form1{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 15px;
+    grid-area: form1;
+}
+
+#form2{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 15px;
+    grid-area: form2;
+}
+
+textarea{
+    resize: none;
+}
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#titulo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-area: submit;
+}
+

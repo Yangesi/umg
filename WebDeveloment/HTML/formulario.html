@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../STYLES/form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <title>HTML5</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <header>
+                <center>
+                    <img src="../IMAGES/html5.png" width="50">
+                    <h1>DESARROLLO WEB</h1>
+                    <h2>Introduccion a HTML 5</h2>
+                </center>
+            </header>
+            <nav>
+                <a id="menu" href="index.html">INICIO</a>
+                <a id="menu" href="elementos.html">ELEMENTOS</a>
+                <a id="menu" href="atributos.html">ATRIBUTOS</a>
+                <a id="menu" href="propiedadescss.html">PROPIEDADES CSS</a>
+            </nav>
+        </div>
+
+<main id="contenido">
+    <div id="contform">
+    <form action="">
+        <fieldset id="form1">
+                <label id="titulo" for="datosperson"><b>Datos personales</b></label>
+                <div class="row2cols2"> 
+                <label for="doc_id">Documento de identificacion</label>
+                        <input type="text" 
+                                id="doc_id"
+                                name="doc_id">
+                </div>
+                <div class="row2cols2">
+                <label for="nombre">Nombre</label>
+                        <input type="text" 
+                                id="nombre"
+                                name="nombre">
+                </div>
+                <div class="row2cols2">
+                <label for="dir">Dirección</label>
+                        <input type="text" 
+                                id="dir"
+                                name="dir">
+                </div>
+                <div class="row2cols2">
+                <label for="pais">País</label>
+                        <input type="text" 
+                                id="pais"
+                                name="pais">
+                </div>
+                <div class="row2cols2">
+                <label for="mail">E-mail</label>
+                        <input type="text" 
+                                id="mail"
+                                name="mail">
+                </div>
+                <div class="row2cols2">
+                <label for="observacion">Observaciones</label>
+                        <textarea id="observacion"
+                                name="observacion"
+                                rows="3"
+                                required minlength="10"></textarea>
+                </div>
+        </fieldset>
+    </form>
+
+    <form action="">
+        <fieldset id="form2">
+                <label id="titulo2" for="datosperson"><b>Datos laborales</b></label>
+                <div class="row2cols">
+                <label for="empresa">Empresa</label> 
+                        <input type="text" 
+                                id="empresa"
+                                name="empresa">
+                </div>
+                <div class="row2cols">
+                <label for="sueldo">Sueldo ordinario</label> 
+                        <input type="text" 
+                                id="sueldo"
+                                name="sueldo">
+                </div>
+                <div class="row2cols">
+                <label for="bon">Bonificación</label>
+                        <input type="text" 
+                                id="bon"
+                                name="bon">
+                </div>
+                <div class="row2cols">
+                <label for="bon2">Otras bonificaciones</label>
+                        <textarea id="bon2"
+                                name="bon2"
+                                rows="3"
+                                required minlength="10"></textarea>
+                            </div>
+        </fieldset>
+    </form>
+    <div id="submit">
+    <input id="submit" type="submit" value="Guardar">
+    </div>
+</div>
+</main>
+
+<footer id="footer">
+    <h4>PABLO ORTEGA 1590-17-1547</h4>
+</footer>
+</div>
+</body>
+</html>
