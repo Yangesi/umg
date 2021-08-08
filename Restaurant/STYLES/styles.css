@@ -1,0 +1,1007 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background: #e9ecf4;
+    
+	font-family: 'Chakra Petch', sans-serif;
+}
+/*Definiendo el diseño de mi pagina index*/
+#container {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "header header"
+						 "aside contenido"
+						 "footer footer";
+}
+/*definiendo las propiedades de cada espacio en el grid*/
+#container > div,
+#container #header,
+#container #contenido,
+#container #aside,
+#container #footer {
+	background: #fff;
+	padding: 10px;
+	
+}
+
+#container #header {
+	color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    background-color: #4CAF50;
+	grid-area: header;
+}
+
+#container #contenido {
+	grid-area: contenido;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+#container #aside {
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+	min-height: 100px;
+    border-right: dashed;
+    border-color: #f89d25;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+	grid-area: aside;
+}
+
+#container #footer {
+	background-color: #4CAF50;
+	color: #fff;
+	grid-area: footer;
+}
+/*Implementando media query cuando tenemos una resolucion de 768px o menos*/
+@media screen and (max-width: 768px){
+	#container {
+        grid-template-areas: "header header"
+                             "contenido contenido"
+                             "aside aside"
+                             "footer footer";
+	}
+
+    #container #aside {
+        /*grid-column: 2 / 3;*/
+        background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-size: auto;
+        min-height: 100px;
+        border-right: dashed;
+        border-color: #f89d25;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        grid-area: aside;
+    }
+
+    /*redifiniendo el tama;o de la imagen cuando tenemos una resolucion menor de pantalla*/
+    #img1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 300px;
+    }
+}
+
+/*menu*/
+
+#menu{
+	text-decoration: none;
+	color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#menu:hover{
+	text-decoration: none;
+	background-color: #3e8e41;
+}
+
+/*menu despegable*/
+/*creando el menu despegable utilizando hover y position*/
+
+#menu2btn {
+    background-color: #4CAF50;
+    color:#ffffff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Chakra Petch', sans-serif;
+  }
+  
+  #despegable {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #infomenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  #infomenu #menu2 {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  #infomenu #menu2:hover {
+      background-color: #fffb18
+    }
+  
+  #despegable:hover #infomenu {
+    display: block;
+  }
+
+#despegable:hover #menu2btn {
+    background-color: #3e8e41;
+  }
+
+  /*efectos de logo*/
+
+  #rotate{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0%; 
+  }
+
+
+  /*aside*/
+
+  #lista{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+a{
+	text-decoration: none;
+}
+
+#temaanex{
+	color: #000000;
+}
+
+  /*footer*/
+  footer{
+      text-align: center;
+  }
+
+  /*textos*/
+
+  h3{
+      color: #f89d25;
+      text-align: center;
+      font-size: 25px;
+  }
+
+  #nosotros{
+      color: #ff539b;
+  }
+
+  #subtitulos{
+      color: #3e8e4b;
+      padding-top: 7px;
+      padding-bottom: 7px;
+  }
+
+  #parrafo{
+      padding: 10px;
+  }
+
+  p{
+      text-align: justify;
+  }
+
+#img1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+/*dise;ando mi pagina breakfast*/
+#container2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "header header"
+						 "contenido contenido"
+						 "footer footer";
+}
+
+#container2 > div,
+#container2 #header,
+#container2 #contenido,
+#container2 #aside,
+#container2 #footer {
+	background: #fff;
+	padding: 10px;
+	
+}
+
+#container2 #header {
+	color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    background-color: #4CAF50;
+	grid-area: header;
+}
+
+#container2 #contenido {
+	grid-area: contenido;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+#container2 #aside {
+	/*grid-column: 2 / 3;*/
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+	min-height: 100px;
+    border-right: dashed;
+    border-color: #f89d25;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+	grid-area: aside;
+}
+
+#container2 #footer {
+	background-color: #4CAF50;
+	color: #fff;
+	grid-area: footer;
+}
+/*Implementando media query cuando tenemos una resolucion de 768px o menos*/
+@media screen and (max-width: 768px){
+	#container2 {
+        grid-template-areas: "header header"
+                             "contenido contenido"
+                             "footer footer";
+	}
+}
+
+/*creando galeria de images*/
+
+#articulo2 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, auto);
+    padding: 20px;
+    border-bottom: dashed;
+    border-color: #f89d25;
+	grid-template-areas: "breakfasttitulo"
+						 "ranchero" 
+                         "chapin"
+                         "divorciados" 
+                         "ommelette";
+}
+
+#breakfasttitulo{
+    grid-area: breakfasttitulo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#ranchero{
+    grid-area: ranchero;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#ranchero:hover{
+    border-color: #4CAF50;
+    border-style: solid;
+    background-color: aquamarine;
+}
+
+#chapin{
+    grid-area: chapin;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#chapin:hover{
+    border-color: #4CAF50;
+    border-style: solid;
+    background-color: aquamarine;
+}
+
+#divorciados{
+    grid-area: divorciados;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#divorciados:hover{
+    border-color: #4CAF50;
+    border-style: solid;
+    background-color: aquamarine;
+}
+
+#ommelette{
+    grid-area: ommelette;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#ommelette:hover{
+    border-color: #4CAF50;
+    border-style: solid;
+    background-color: aquamarine;
+}
+
+#articulo3 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, auto);
+    padding: 20px;
+    border-bottom: dashed;
+    border-color: #f89d25;
+	grid-template-areas: "postrestitulo"
+						 "primavera" 
+                         "yogurt" 
+                         "panqueques" 
+                         "avena";
+}
+
+#text1{
+    padding: 10px;
+}
+
+#postrestitulo{
+    grid-area: postrestitulo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#primavera{
+    grid-area: primavera;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#primavera:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#yogurt{
+    grid-area: yogurt;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#yogurt:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#panqueques{
+    grid-area: panqueques;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#panqueques:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#avena{
+    grid-area: avena;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#avena:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#articulo4 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, auto);
+    padding: 20px;
+	grid-template-areas: "bebidastitulo"
+						 "cafe" 
+                         "cafeleche" 
+                         "capuchino" 
+                         "cafeirlandes";
+}
+#bebidastitulo{
+    grid-area: bebidastitulo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#cafe{
+    grid-area: cafe;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#cafe:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+#cafeleche{
+    grid-area: cafeleche;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#cafeleche:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+#capuchino{
+    grid-area: capuchino;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#capuchino:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+#cafeirlandes{
+    grid-area: cafeirlandes;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#cafeirlandes:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*dise;ando mi pagina web lunch*/
+
+#container3 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "header header"
+						 "contenido contenido"
+						 "footer footer";
+}
+
+#container3 > div,
+#container3 #header,
+#container3 #contenido,
+#container3 #aside,
+#container3 #footer {
+	background: #fff;
+	padding: 10px;
+	
+}
+
+#container3 #header {
+	color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    background-color: #4CAF50;
+	grid-area: header;
+}
+
+#container3 #contenido {
+	grid-area: contenido;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+#container3 #aside {
+	/*grid-column: 2 / 3;*/
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+	min-height: 100px;
+    border-right: dashed;
+    border-color: #f89d25;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+	grid-area: aside;
+}
+
+#container3 #footer {
+	background-color: #4CAF50;
+	color: #fff;
+	grid-area: footer;
+}
+/*Implementando media query cuando tenemos una resolucion de 768px o menos*/
+@media screen and (max-width: 768px){
+	#container3 {
+        grid-template-areas: "header header"
+                             "contenido contenido"
+                             "footer footer";
+	}
+}
+
+/*creando galeria de images*/
+
+#articulo5 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, auto);
+    padding: 20px;
+    border-bottom: dashed;
+    border-color: #f89d25;
+	grid-template-areas: "lunchtitulo"
+						 "asadotipico" 
+                         "puyazo"
+                         "compadres" 
+                         "carnitas";
+}
+
+/*definiendo cada parte del menu*/
+#lunchtitulo{
+    grid-area: lunchtitulo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#asadotipico{
+    grid-area: asadotipico;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#asadotipico:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+#puyazo{
+    grid-area: puyazo;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#puyazo:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+#compadres{
+    grid-area: compadres;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#compadres:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+#carnitas{
+    grid-area: carnitas;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#carnitas:hover{
+    border-color: #d9e442;
+    border-style: solid;
+    background-color: #da7b7b;
+}
+
+#articulo6 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, auto);
+    padding: 20px;
+    border-bottom: dashed;
+    border-color: #f89d25;
+	grid-template-areas: "postrestitulo2"
+						 "quesadillas" 
+                         "guacamole" 
+                         "tacos" 
+                         "tacorey";
+}
+
+#text1{
+    padding: 10px;
+}
+
+#postrestitulo2{
+    grid-area: postrestitulo2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#quesadillas{
+    grid-area: quesadillas;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#quesadillas:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#guacamole{
+    grid-area: guacamole;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#guacamole:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#tacos{
+    grid-area: tacos;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#tacos:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#tacorey{
+    grid-area: tacorey;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#tacorey:hover{
+    border-color: #478fee;
+    border-style: solid;
+    background-color: #dae290;
+}
+
+#articulo7 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, auto);
+    padding: 20px;
+	grid-template-areas: "bebidastitulo2"
+						 "litrogaseosa" 
+                         "soda" 
+                         "limonada" 
+                         "naranjada";
+}
+#bebidastitulo2{
+    grid-area: bebidastitulo2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#litrogaseosa{
+    grid-area: litrogaseosa;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#litrogaseosa:hover{
+    border-color: #e44242;
+    border-style: solid;
+    background-color: #71d876;
+}
+
+#soda{
+    grid-area: soda;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#soda:hover{
+    border-color: #e44242;
+    border-style: solid;
+    background-color: #71d876;
+}
+
+#limonada{
+    grid-area: limonada;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#limonada:hover{
+    border-color: #e44242;
+    border-style: solid;
+    background-color: #71d876;
+}
+
+#naranjada{
+    grid-area: naranjada;
+    display: flex;
+    flex-direction: row;
+    padding: 10PX;
+}
+
+#naranjada:hover{
+    border-color: #e44242;
+    border-style: solid;
+    background-color: #71d876;
+}
+
+
+/*dise;ando mi pagina de formularios*/
+
+#container4 {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "header header"
+						 "aside contenido"
+						 "footer footer";
+}
+
+#container4 > div,
+#container4 #header,
+#container4 #contenido,
+#container4 #aside,
+#container4 #footer {
+	background: #fff;
+	padding: 10px;
+	
+}
+
+#container4 #header {
+	color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    background-color: #4CAF50;
+	grid-area: header;
+}
+
+#container4 #contenido {
+	grid-area: contenido;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container4 #aside {
+	/*grid-column: 2 / 3;*/
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-abstracto-blanco-simple_53876-99910.jpg?size=626&ext=jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+	min-height: 100px;
+    border-right: dashed;
+    border-color: #f89d25;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+	grid-area: aside;
+}
+
+#container4 #footer {
+	background-color: #4CAF50;
+	color: #fff;
+	grid-area: footer;
+}
+/*Implementando media query cuando tenemos una resolucion de 768px o menos*/
+@media screen and (max-width: 768px){
+	#container4 {
+        grid-template-areas: "header header"
+                             "contenido contenido" 
+                             "aside aside"
+                             "footer footer";
+	}
+}
+
+/*formularios*/
+/*aplicando grid*/
+
+#contform{
+	display: grid;
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, auto);
+
+	grid-template-areas: "form1"
+                         "submit"
+                         "info"
+						 "form2"
+                         "submit1";
+
+}
+
+.row2cols{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 3px;
+}
+
+.row2cols2{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 3px;
+}
+
+#doc_id{
+    margin-left: 10px;
+}
+
+#form1{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 15px;
+    grid-area: form1;
+    background-color: #ece8e8;
+    border-radius: 10px;
+    padding: 3px 10px;
+    border: PowderBlue 5px double;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#form2{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 15px;
+    grid-area: form2;
+    background-color: #ece8e8;
+    padding: 3px 10px;
+    border: PowderBlue 5px double;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+textarea{
+    resize: none;
+}
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#titulo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-area: submit;
+}
+
+#submit1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-area: submit1;
+}
+
+#info{
+    border-bottom: dashed;
+    border-color: #f89d25;
+   grid-area: info; 
+}
