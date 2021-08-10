@@ -62,7 +62,8 @@ body{
 
 #contform{
 	display: grid;
-
+    border: 2px solid #82858a;
+    padding: 10px;
     max-width: 900px;
     justify-content: center;
     align-items: center;
@@ -134,12 +135,22 @@ textarea{
 
 #submit {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     grid-area: submit;
+}
+
+#enviar:hover {
+    background-color: #293d68;
+}
+
+#enviar{
+    padding: 10px;
+    background-color: #12203E;
+    color: #ffffff;
 }
 
