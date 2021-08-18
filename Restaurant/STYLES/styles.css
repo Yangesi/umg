@@ -285,6 +285,11 @@ a{
 	color: #fff;
 	grid-area: footer;
 }
+
+
+
+
+
 /*Implementando media query cuando tenemos una resolucion de 768px o menos*/
 @media screen and (max-width: 768px){
 	#container2 {
@@ -301,6 +306,7 @@ a{
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(5, auto);
     padding: 20px;
+    
     border-bottom: dashed;
     border-color: #f89d25;
 	grid-template-areas: "breakfasttitulo"
@@ -308,6 +314,35 @@ a{
                          "chapin"
                          "divorciados" 
                          "ommelette";
+}
+
+
+#btncomprar{
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 70px;
+    height: 50px;
+    padding: 10px;
+        background-color: #3e8e41; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 13px;
+        cursor: pointer;
+}
+
+#btncomprar:hover{
+    background-color: #4CAF50;
+}
+
+
+#text1{
+ width: 80%;
 }
 
 #breakfasttitulo{
@@ -321,7 +356,6 @@ a{
 #ranchero{
     grid-area: ranchero;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -331,10 +365,10 @@ a{
     background-color: aquamarine;
 }
 
+
 #chapin{
     grid-area: chapin;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -347,7 +381,6 @@ a{
 #divorciados{
     grid-area: divorciados;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -360,7 +393,6 @@ a{
 #ommelette{
     grid-area: ommelette;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -368,6 +400,54 @@ a{
     border-color: #4CAF50;
     border-style: solid;
     background-color: aquamarine;
+}
+
+/*media query usado para darle definicion al menu de productos*/
+@media screen and (max-width: 768px){
+	#container2 {
+        grid-template-areas: "header header"
+                             "contenido contenido"
+                             "footer footer";
+	}
+
+    #ranchero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #chapin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divorciados{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ommelette{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #primavera{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img{
+        width: 150px;
+    }
+
+    #text1{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 #articulo3 {
@@ -399,7 +479,6 @@ a{
 #primavera{
     grid-area: primavera;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -412,7 +491,6 @@ a{
 #yogurt{
     grid-area: yogurt;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -425,7 +503,6 @@ a{
 #panqueques{
     grid-area: panqueques;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -438,7 +515,6 @@ a{
 #avena{
     grid-area: avena;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -447,6 +523,9 @@ a{
     border-style: solid;
     background-color: #dae290;
 }
+
+
+
 
 #articulo4 {
 	display: grid;
@@ -470,7 +549,6 @@ a{
 #cafe{
     grid-area: cafe;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -483,7 +561,6 @@ a{
 #cafeleche{
     grid-area: cafeleche;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -496,7 +573,6 @@ a{
 #capuchino{
     grid-area: capuchino;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -509,7 +585,6 @@ a{
 #cafeirlandes{
     grid-area: cafeirlandes;
     display: flex;
-    flex-direction: row;
     padding: 10PX;
 }
 
@@ -519,7 +594,48 @@ a{
     background-color: #da7b7b;
 }
 
+@media screen and (max-width: 768px){
+	#container2 {
+        grid-template-areas: "header header"
+                             "contenido contenido"
+                             "footer footer";
+	}
+/*deifiniendo propiedad responsiva */
 
+
+    #primavera{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #yogurt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #panqueques{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #avena{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img{
+        width: 150px;
+    }
+
+    #text1{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 
 
@@ -784,7 +900,7 @@ a{
 #litrogaseosa:hover{
     border-color: #e44242;
     border-style: solid;
-    background-color: #71d876;
+    background-color: #82e9e4;
 }
 
 #soda{
@@ -797,7 +913,7 @@ a{
 #soda:hover{
     border-color: #e44242;
     border-style: solid;
-    background-color: #71d876;
+    background-color: #82e9e4;
 }
 
 #limonada{
@@ -810,7 +926,7 @@ a{
 #limonada:hover{
     border-color: #e44242;
     border-style: solid;
-    background-color: #71d876;
+    background-color: #82e9e4;
 }
 
 #naranjada{
@@ -823,8 +939,85 @@ a{
 #naranjada:hover{
     border-color: #e44242;
     border-style: solid;
-    background-color: #71d876;
+    background-color: #82e9e4;
 }
+
+@media screen and (max-width: 768px){
+	#container3 {
+        grid-template-areas: "header header"
+                             "contenido contenido"
+                             "footer footer";
+	}
+/*deifiniendo propiedad responsiva */
+
+
+
+    #asadotipico{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #puyazo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #compadres{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #carnitas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #quesadillas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #guacamole{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tacos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tacorey{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img{
+        width: 150px;
+    }
+
+    #text1{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 /*dise;ando mi pagina de formularios*/
