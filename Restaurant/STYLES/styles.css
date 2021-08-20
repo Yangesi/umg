@@ -299,7 +299,7 @@ a{
 	}
 }
 
-/*creando galeria de images*/
+/*creando galeria de images DE LOS ALMUERZOS*/
 
 #articulo2 {
 	display: grid;
@@ -339,7 +339,6 @@ a{
 #btncomprar:hover{
     background-color: #4CAF50;
 }
-
 
 #text1{
  width: 80%;
@@ -401,6 +400,78 @@ a{
     border-style: solid;
     background-color: aquamarine;
 }
+
+/*dandole estilo al carrito de compras*/
+
+#borderTable{
+    border-bottom: solid 3px #f89d25;
+}
+
+.tableCar{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.table-productos{
+    display: flex;
+    padding: 10px;
+}
+
+.table-precio{
+    padding: 10px;
+    text-align: center;
+}
+
+.table-cantidad{
+    padding: 10px;
+    text-align: center;
+}
+
+.table-productos > img{
+    width: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.table-cantidad > input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+}
+
+.table-cantidad > button{
+    background-color: #e44242;
+    border-style: none;
+    color: #e9ecf4;
+    width: 30px;
+    padding: 5px;
+}
+
+.table-cantidad > button:hover{
+    background-color: #ff562c;
+}
+
+.contador{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+
+.btnComprarCar{
+    background-color: #3e8e41;
+    border-style: none;
+    color: #e9ecf4;
+    padding: 10px;
+    cursor: pointer;
+}
+
 
 /*media query usado para darle definicion al menu de productos*/
 @media screen and (max-width: 768px){
