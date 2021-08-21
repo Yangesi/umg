@@ -23,9 +23,6 @@
                         </div>
                     </div>
                 <a id="menu" href="login.html" target="_blank">INICIAR SESION</a>
-                <a id="iconcar" href="carrito.html">
-            <img id="imgcarrito" src="../IMAGES/carrito.png" width="30px">
-                </a>
         </header>
 
         
@@ -155,8 +152,10 @@
                 <button id="btncomprar" class="button" >Añadir al carrito</button>
                 </div>
             </article>
-
-            <table class="tableCar">
+<div id="contCar">
+            <div id="contCar1">
+                <h3>SU PEDIDO</h3>
+            <table class="tableCar"><!--la tabla contenedora del carrito-->
                 <thead>
                   <tr class="tableTitle">
                     <th id="borderTable" scope="col">#</th>
@@ -168,9 +167,8 @@
                 <tbody class="tbody">
                 </tbody>
               </table>
-              <br><br>
             
-            <div class="contador">
+            <div class="contador"><!--tag encargadas de mantener el contador del carrito-->
                 <div class="col">
                     <h3 class="itemTotal">Total: 0</h3>
                 </div>
@@ -178,6 +176,40 @@
                     <button class="btnComprarCar">COMPRAR</button>
                 </div>
             </div>
+        </div>
+
+            <div id="contConfirm">
+
+                <form action="">
+                    <fieldset id="formPedido">
+                            <label id="titulo" for="datosperson"><b>CONFIRMAR PEDIDO</b></label>
+                            <div class="parteForm"> 
+                            <label for="doc_id">Nit</label>
+                                    <input type="text" 
+                                            id="nit"
+                                            name="nit"
+                                            placeholder="Opcional">
+                            </div>
+                            <div class="parteForm">
+                            <label for="nombre">Nombre</label>
+                                    <input type="text" 
+                                            id="nombre"
+                                            name="nombre"
+                                            placeholder="Nombre y apellido">
+                            </div>
+                            <div class="parteForm">
+                                <label for="nombre">Direccion</label>
+                                        <input type="text" 
+                                                id="nombre"
+                                                name="nombre"
+                                                placeholder="Direccion de entrega">
+                                </div>
+                                <input id="btnConfirmar" type="submit" value="Confirmar">
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
             
         </main>
         <footer id="footer"><!--Definiendo el footer-->
