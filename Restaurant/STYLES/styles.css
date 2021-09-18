@@ -1235,8 +1235,13 @@ a{
     padding: 3px;
 }
 
-#doc_id{
+#user{
     margin-left: 10px;
+    padding: 4px;
+}
+
+#pass{
+    padding: 4px;
 }
 
 #form1{
@@ -1248,6 +1253,7 @@ a{
     background-color: #ece8e8;
     border-radius: 10px;
     padding: 3px 10px;
+    background-color: #f7a46d;
     border: PowderBlue 5px double;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -1261,6 +1267,7 @@ a{
     grid-area: form2;
     background-color: #ece8e8;
     padding: 3px 10px;
+    background-color: #f7a46d;
     border: PowderBlue 5px double;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -1292,6 +1299,7 @@ textarea{
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #8de08f;
     grid-area: submit;
 }
 
@@ -1303,6 +1311,7 @@ textarea{
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #8de08f;
     grid-area: submit1;
 }
 
@@ -1310,4 +1319,64 @@ textarea{
     border-bottom: dashed;
     border-color: #f89d25;
    grid-area: info; 
+}
+
+/* dise;os del control de inventario*/
+/*definiendo dise;o responsivo de los formularios*/
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+    .table-responsive > .table {
+        margin-bottom: 0;
+    }
+    .table-responsive > .table > thead > tr > th,
+    .table-responsive > .table > tbody > tr > th,
+    .table-responsive > .table > tfoot > tr > th,
+    .table-responsive > .table > thead > tr > td,
+    .table-responsive > .table > tbody > tr > td,
+    .table-responsive > .table > tfoot > tr > td {
+        white-space: nowrap;
+    }
+}
+
+#cajaform{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#formCompras, #formVentas, #formExistencias{
+    padding: 10px;
+    min-width: 900px;
+    margin: 5px;
+    background-color: #e7ebe7;
+}
+
+#proveedor, #nomProduct, #exisActual, #cliente, #fecha, #mov{
+    padding: 5px;
+} 
+
+.btnAgregar{
+    background-color: #3e8e41;
+    border-style: none;
+    color: #e9ecf4;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#btnAgreg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

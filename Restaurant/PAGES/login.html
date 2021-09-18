@@ -22,7 +22,7 @@
                             <a id="menu2" href="lunchanddinner.html" target="_blank">Almuerzos</a>
                         </div>
                     </div>
-                <a id="menu" href="PAGES/login.html">INICIAR SESION</a>
+                <a id="menu" href="login.html">INICIAR SESION</a>
             
         </header>
         <main id="contenido"><!--Definiendo el contenido-->
@@ -34,19 +34,20 @@
                             <div class="row2cols2"> 
                             <label for="doc_id">Usuario</label>
                                     <input type="text" 
-                                            id="doc_id"
-                                            name="doc_id">
+                                            id="user"
+                                            name="user">
                             </div>
                             <div class="row2cols2">
                             <label for="nombre">Contraseña</label>
                                     <input type="password" 
-                                            id="nombre"
-                                            name="nombre">
+                                            id="pass"
+                                            name="pass">
                             </div>
+                            <h5 style="margin: auto;"><b><i>Inicia sesion para llevar el control de inventario de los productos</i></b></h5> 
                     </fieldset>
                 </form>
                 <div id="submit">
-                    <input id="submit" type="submit" value="Ingresar">
+                    <input id="submit" onclick="validar()" type="submit" value="Ingresar">
                 </div>
                 <div id="info">
                     <h3>¿Aún no te has registrado?</h3>
@@ -118,5 +119,6 @@
             <h5>© EL RANCHO, 2021</h5>
         </footer>
     </div>
+    <script src="../SCRIPT/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../STYLES/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <title>EL RANCHO</title>
+</head>
+<body>
+    <div id="container4"> <!--Definiendo el encabezado-->
+        <header id="header">
+                        <div id="rotate">
+                            <img src="../IMAGES/sombrero.png" width="60">
+                        </div>
+                    <a id="menu" href="../index.html">INICIO</a>
+                    <div id="despegable"><!--estructurando el menu despegable-->
+                        <button id="menu2btn">MENU</button>
+                        <div id="infomenu">
+                            <a id="menu2" href="breakfast.html" target="_blank">Desayunos</a>
+                            <a id="menu2" href="lunchanddinner.html" target="_blank">Almuerzos</a>
+                        </div>
+                    </div>
+                    <a id="menu" href="login.html">INICIAR SESION</a>
+            
+                </header>
+                <main id="contenido"><!--formulario de compras-->
+                    <h2>GESTION DEL INVENTARIO</h2>
+                        <div class="table-responsive">
+                        <form action="">
+                            <fieldset id="formCompras">
+                                    <h3>COMPRAS</h3>
+                                   <div id="cajaform"> 
+                                    <label>Proveedor</label>
+                                            <input type="text" 
+                                                    id="proveedor"
+                                                    name="proveedor"
+                                                    placeholder="Nombre del proveedor"
+                                                    required="">
+                                    </div>
+                                    <div id="cajaform"> 
+                                    <label>Fecha</label>
+                                            <input type="date" 
+                                                    id="fecha1"
+                                                    name="fecha"
+                                                    placeholder="Fecha de la compra"
+                                                    required="">
+                                    </div>
+                                    <div id="cajaform"> 
+                                        <label>Movimiento</label>
+                                                <input type="text" 
+                                                        id="mov"
+                                                        name="mov"
+                                                        placeholder="Tipo de movimiento"
+                                                        required="">
+                                        </div>   
+                        
+                    <div id="contCar1">
+                    <table class="tableCar"><!--la tabla contenedora de las compras-->
+                        <thead>
+                          <tr class="tableTitle">
+                            <th id="borderTable" scope="col">Codigo</th>
+                            <th id="borderTable" scope="col">Producto</th>
+                            <th id="borderTable" scope="col">Cantidad</th>
+                            <th id="borderTable" scope="col">Precio</th>
+                            <th id="borderTable" scope="col">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbody2">
+                            <tr><!--agregando los productos que se necesitan comprar-->
+                                <td>100</td>
+                                <td>Pollo (cant en lb)</td>
+                                <td><input id="cant" type="number" min="0" value="0" oninput="sumar()" step="0.10"></td>
+                                <td><input id="price" type="number" min="1" value="10" oninput="sumar()" step="0.10"></td>
+                                <!--<td><input id="total" type="number" min="1" value="0"></td>-->
+                                <td><h2 id="textt">Q 0</h2></td>      
+                            </tr>
+                            <tr>
+                                <td>200</td>
+                                <td>Arroz (cant en lb)</td>
+                                <td><input id="cant2" type="number" min="0" value="0" oninput="sumar()" step="0.10"></td>
+                                <td><input id="price2" type="number" min="1" value="5" oninput="sumar()" step="0.10"></td>
+                                <!--<td><input id="total" type="number" min="1" value="0"></td>-->
+                                <td><h2 id="textt2">Q 0</h2></td>      
+                            </tr>
+                            <tr>
+                                <td>300</td>
+                                <td>Carne (cant en lb)</td>
+                                <td><input id="cant3" type="number" min="0" value="0" oninput="sumar()" step="0.10"></td>
+                                <td><input id="price3" type="number" min="1" value="28" oninput="sumar()" step="0.10"></td>
+                                <!--<td><input id="total" type="number" min="1" value="0"></td>-->
+                                <td><h2 id="textt3">Q 0</h2></td>      
+                            </tr>
+                        </tbody>
+                      </table>
+                    
+                    <div class="contador"><!--tag encargadas de mantener el contador de compras-->
+                        <div class="col">
+                            <h3 id="itemTotal">Total: 0</h3>
+                        </div>
+                    </div>
+                    <div id="btnAgreg">
+                        <button class="btnAgregar" title="Agregar una compra al inventario" onclick="validateFields2()">AGREGAR</button>
+                    </div>
+                </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="table-responsive"><!--formulario de ventas-->
+            <form action="">
+                <fieldset id="formVentas">
+                        <h3>VENTAS</h3>
+                       <div id="cajaform"> 
+                        <label>Cliente</label>
+                                <input type="text" 
+                                        id="cliente"
+                                        name="cliente"
+                                        placeholder="Nombre del cliente"
+                                        required="">
+                        </div>
+                        <div id="cajaform"> 
+                        <label>Fecha</label>
+                                <input type="date" 
+                                        id="fecha2"
+                                        name="fecha"
+                                        placeholder="Fecha de la venta"
+                                        required="">
+                        </div>
+                        <div id="cajaform"> 
+                            <label>Movimiento</label>
+                                    <input type="text" 
+                                            id="mov"
+                                            name="mov"
+                                            placeholder="Tipo de movimiento"
+                                            required="">
+                            </div>   
+            
+        <div id="contCar1">
+        <table class="tableCar"><!--la tabla contenedora de los productos-->
+            <thead>
+              <tr class="tableTitle">
+                <th id="borderTable" scope="col">Codigo</th>
+                <th id="borderTable" scope="col">Productos</th>
+                <th id="borderTable" scope="col">Cantidad</th>
+                <th id="borderTable" scope="col">Precio</th>
+                <th id="borderTable" scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr><!--agregando los productos que estan a la venta-->
+                    <td>100</td>
+                    <td>Panqueques</td>
+                    <td><input id="cant4" type="number" min="0" value="0" oninput="sumar2()" step="0.10"></td>
+                    <td><input id="price4" type="number" min="1" value="33" oninput="sumar2()" step="0.10"></td>
+                    <!--<td><input id="total" type="number" min="1" value="0"></td>-->
+                    <td><h2 id="textt4">Q 0</h2></td>      
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>Avena</td>
+                    <td><input id="cant5" type="number" min="0" value="0" oninput="sumar2()" step="0.10"></td>
+                    <td><input id="price5" type="number" min="1" value="28" oninput="sumar2()" step="0.10"></td>
+                    <!--<td><input id="total" type="number" min="1" value="0"></td>-->
+                    <td><h2 id="textt5">Q 0</h2></td>      
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>Divorciados</td>
+                    <td><input id="cant6" type="number" min="0" value="0" oninput="sumar2()" step="0.10"></td>
+                    <td><input id="price6" type="number" min="1" value="54" oninput="sumar2()" step="0.10"></td>
+                    <!--<td><input id="total" type="number" min="1" value="0"></td>-->
+                    <td><h2 id="textt6">Q 0</h2></td>      
+                </tr>
+            </tbody>
+          </table>
+        
+        <div class="contador"><!--tag encargadas de mantener el contador-->
+            <div class="col">
+                <h3 id="itemTotal2">Total: 0</h3>
+            </div>
+        </div>
+        <div id="btnAgreg">
+            <button class="btnAgregar" title="Agregar una venta al inventario" onclick="validateFields()">AGREGAR</button>
+        </div>
+    </div>
+</fieldset>
+</form>
+</div>
+
+<div class="table-responsive"><!--formulario de existencias de productos-->
+<form action="">
+    <fieldset id="formExistencias">
+            <h3>EXISTENCIAS DE PRODUCTOS</h3>
+           <div id="cajaform"> 
+            <label>Producto</label>
+                    <input type="text" 
+                            id="nomProduct"
+                            name="exisProduct"
+                            placeholder="Nombre del producto"
+                            required="">
+            </div>
+            <div id="cajaform"> 
+            <label>Fecha</label>
+                    <input type="date" 
+                            id="fecha3"
+                            name="fecha"
+                            placeholder="Fecha"
+                            required="">
+            </div>
+            <div id="cajaform"> 
+                <label>Existencia actual</label>
+                        <input type="text" 
+                                id="exisActual"
+                                name="exisActual"
+                                placeholder="Existencia actualizada del producto"
+                                required="">
+                </div>   
+                <div id="btnAgreg"><!--configurando los botones para a;adir productos-->
+                    <input type="button" title="Agregar el producto y mostrar en tabla" class="btnAgregar" onclick="addProduct()" value="AGREGAR">
+                </div>
+                <div id="btnAgreg">
+                    <input type="button" class="btnAgregar" title="Mostrar productos existentes en el inventario" onclick="populateTable2();" value="MOSTRAR EXISTENCIAS">
+                </div>
+
+<div id="contCar1">
+<table class="tableCar"><!--la tabla contenedora de LOS PRODUCTOS-->
+<thead>
+  <tr class="tableTitle">
+    <th id="borderTable" scope="col">Codigo</th>
+    <th id="borderTable" scope="col">Productos</th>
+    <th id="borderTable" scope="col">Cantidad</th>
+    <th id="borderTable" scope="col">Precio</th>
+  </tr>
+</thead>
+<tbody id="tbodyExis">
+</tbody>
+</table>
+
+</div>
+</fieldset>
+</form>
+</div>
+
+                </main>
+
+                <aside id="aside"><!--Definiendo el aside-->
+                    <h3 id="tituloanex">PRODUCTOS MAS SOLICITADOS</h3>
+                    <ol id="lista"><li id="plista"><a id="temaanex" href="" target="_blank">Desayuno Ranchero</a></li>
+                    <li id="plista"><a id="temaanex" href="">Los Compadres</a></li>
+                    <li id="plista"><a id="temaanex" href="">Quesadillas Del Comal</a></li>
+                    <li id="plista"><a id="temaanex" href="">Asado Típico</a></li>
+                    <li id="plista"><a id="temaanex" href="">Platón de Carnitas</a></li></ol>
+                    <img src="../IMAGES/Pepsi-logo.png" width="200px">  
+                    <h5><b><i>Te invitamos a revisar nuestro menu</i></b></h5> 
+                </aside>
+                <footer id="footer"><!--Definiendo el footer-->
+                    <h4>SIGUENOS EN:</h4>
+                    <img src="../IMAGES/facebook.png" width="25px">
+                    <img src="../IMAGES/whatsapp.png" width="25px">
+                    <h5>CONTACTANOS</h5>
+                    <h5>PREGUNTAS FRECUENTES</h5>
+                    <h5>TERMINOS Y CONDICIONES</h5>
+                    <h5>© EL RANCHO, 2021</h5>
+                </footer>
+            </div>
+            <script src="../SCRIPT/script.js"></script>
+        </body>
+        </html>
